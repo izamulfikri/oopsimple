@@ -1,6 +1,6 @@
 package tb;
 
-public abstract class snack extends dessert implements item {
+public abstract class snack extends dessert {
     int stok;
 
     public snack(String nama, String dType) {

@@ -1,5 +1,5 @@
 package tb;
-import java.util.*;
+import java.util.ArrayList;
 public class admin extends human{
     ArrayList<pembeli> pembeli = new ArrayList<pembeli>(); // untuk menyimpan data pembeli
 
@@ -9,11 +9,7 @@ public class admin extends human{
         this.password = password;
     }
 
-    // method cek stok
-
-    // method update stok
-
-    // method riwayat pembelian
-
-    // method cek keuntungan
+    String name(){
+        return super.nama;
+    }
 }

@@ -110,4 +110,39 @@ public class pastry extends bakery implements item {
             System.out.println("Stok kurang.. tidak dapat melakukan pembelian");
         }
     }
+
+    @Override
+    public void info(){
+        cekHargaItem();
+        cekStokItem();
+    }
+
+    public void infoTmp(){
+        System.out.println();
+        System.out.println("Nama        : "+super.nama);
+        System.out.println("Type        : "+super.dType);
+        System.out.println("Rasa        : "+super.rasa);
+        System.out.println("Bakery Type : "+super.bType);
+        System.out.println("Harga       : "+this.harga);
+        System.out.println("Stok        : "+this.stok);
+        System.out.println();
+    }
+
+
+    public void changeData(String nama, String rasa, double harga, int stok){
+        super.nama = nama;
+        super.rasa = rasa;
+        super.bType = bType;
+        this.harga = harga;
+        this.stok = stok;
+        System.out.println("\n Berhasil update data.. \n");
+    }
+
+    public double getHargaTotal(double total){
+        return total - diskon(total);
+    }
+
+    public double getTotalKotor(int jml){
+        return harga * jml;
+    }
 }
